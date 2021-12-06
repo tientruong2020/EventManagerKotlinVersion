@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="photo_list_preview_colums">3</integer>
+    <dimen name="photos_list_spacing">10dp</dimen>
+</resources>
