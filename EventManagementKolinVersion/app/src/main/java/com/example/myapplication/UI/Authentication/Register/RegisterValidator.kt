@@ -1,8 +1,7 @@
-package com.example.myapplication.UI.Authentication.Register
+package com.example.myapplication.ui.authentication.Register
 
 import android.text.TextUtils
 import android.util.Patterns
-import java.util.regex.Pattern
 
 object RegisterValidator {
 

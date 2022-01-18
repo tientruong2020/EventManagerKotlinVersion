@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.QRCodeScanner
+package com.example.myapplication.ui.main.qrcodescanner
 
 object ScannerValidator {
 

@@ -3,7 +3,7 @@ package com.example.myapplication.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.myapplication.Data.Remote.RTDBRepositoryImpl
+import com.example.myapplication.data.remote.RTDBRepositoryImpl
 
 class ScannerViewModel(application: Application): AndroidViewModel(application) {
 

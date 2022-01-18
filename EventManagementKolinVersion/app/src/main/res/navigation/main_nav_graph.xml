@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.myapplication.UI.Main.Home.HomeFragment"
+        android:name="com.example.myapplication.ui.main.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -22,12 +22,12 @@
     </fragment>
     <fragment
         android:id="@+id/addingEventFragment"
-        android:name="com.example.myapplication.UI.Main.AddingEvent.AddingEventFragment"
+        android:name="com.example.myapplication.ui.main.addingevent.AddingEventFragment"
         android:label="fragment_adding_event"
         tools:layout="@layout/fragment_adding_event" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.myapplication.UI.Main.Profile.ProfileFragment"
+        android:name="com.example.myapplication.ui.main.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.myapplication.UI.search.SearchFragment"
+        android:name="com.example.myapplication.ui.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileEditorFragment"
-        android:name="com.example.myapplication.UI.Main.Profile.ProfileEditorFragment"
+        android:name="com.example.myapplication.ui.main.profile.ProfileEditorFragment"
         android:label="fragment_profile_editor"
         tools:layout="@layout/fragment_profile_editor" >
         <action
@@ -69,7 +69,7 @@
     </fragment>
     <dialog
         android:id="@+id/pickImageOptionFragment"
-        android:name="com.example.myapplication.UI.Main.Profile.PickImageOptionFragment"
+        android:name="com.example.myapplication.ui.main.profile.PickImageOptionFragment"
         android:label="fragment_pick_image_option"
         tools:layout="@layout/fragment_pick_image_option" >
         <action
@@ -78,7 +78,7 @@
     </dialog>
     <fragment
         android:id="@+id/commentFragment"
-        android:name="com.example.myapplication.UI.Main.Home.CommentFragment"
+        android:name="com.example.myapplication.ui.main.home.CommentFragment"
         android:label="fragment_comment"
         tools:layout="@layout/fragment_comment" >
         <action
@@ -93,7 +93,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailEventFragment"
-        android:name="com.example.myapplication.UI.Main.DetailEvent.DetailEventFragment"
+        android:name="com.example.myapplication.ui.main.detailevent.DetailEventFragment"
         android:label="DetailEventFragment" >
         <action
             android:id="@+id/action_detailEventFragment_to_homeFragment"
@@ -107,7 +107,7 @@
     </fragment>
     <fragment
         android:id="@+id/QRCodeScannerFragment"
-        android:name="com.example.myapplication.UI.Main.QRCodeScanner.QRCodeScannerFragment"
+        android:name="com.example.myapplication.ui.main.qrcodescanner.QRCodeScannerFragment"
         android:label="fragment_q_r_code_scanner"
         tools:layout="@layout/fragment_q_r_code_scanner" >
         <action
@@ -119,7 +119,7 @@
     </fragment>
     <fragment
         android:id="@+id/otherProfileFragment"
-        android:name="com.example.myapplication.UI.Main.Profile.OtherProfileFragment"
+        android:name="com.example.myapplication.ui.main.profile.OtherProfileFragment"
         android:label="fragment_other_profile"
         tools:layout="@layout/fragment_other_profile" >
         <argument
@@ -131,17 +131,17 @@
     </fragment>
     <fragment
         android:id="@+id/searchUserFragment"
-        android:name="com.example.myapplication.UI.search.SearchUserFragment"
+        android:name="com.example.myapplication.ui.search.SearchUserFragment"
         android:label="fragment_search_user"
         tools:layout="@layout/fragment_search_user" />
     <fragment
         android:id="@+id/searchEventFragment"
-        android:name="com.example.myapplication.UI.search.SearchEventFragment"
+        android:name="com.example.myapplication.ui.search.SearchEventFragment"
         android:label="fragment_search_event"
         tools:layout="@layout/fragment_search_event" />
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.example.myapplication.UI.Main.Calendar.CalendarFragment"
+        android:name="com.example.myapplication.ui.main.calendar.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" >
         <action

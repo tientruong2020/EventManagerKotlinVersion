@@ -1,4 +1,4 @@
-package com.example.myapplication.Data.Remote
+package com.example.myapplication.data.remote
 
 import android.net.Uri
 import android.util.Log
@@ -13,9 +13,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.text.SimpleDateFormat
-import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.math.log
 
 class RTDBRepositoryImpl : RTDBRepository {
 
@@ -91,10 +89,11 @@ class RTDBRepositoryImpl : RTDBRepository {
     }
 
     override fun getAllEvent(): MutableLiveData<ArrayList<Event>> {
-        val eventArrList = ArrayList<Event>()
+
         val eventListLiveData = MutableLiveData<ArrayList<Event>>()
         eventRef.orderByChild("createdAt").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val eventArrList = ArrayList<Event>()
                 for (eventSnapshot in dataSnapshot.children) {
                     val eventName = eventSnapshot.child("eventName").value.toString()
                     val description = eventSnapshot.child("description").value.toString()
@@ -304,7 +303,7 @@ class RTDBRepositoryImpl : RTDBRepository {
                                 val user: User? = snapshot.getValue(User::class.java)
                                 if (user != null) {
                                     val comment =
-                                        Comment(commentKey.toString(), user, content, createdAt)
+                                        Comment(commentKey.toString(),creatorId, user, content, createdAt)
                                     if(commentArrList.size > 0){
                                         var count =0
                                         for (i in 0.. commentArrList.size-1){
@@ -480,9 +479,13 @@ class RTDBRepositoryImpl : RTDBRepository {
 
     override fun getCountEventsByUid(currentUid: String): MutableLiveData<Long> {
         val result = MutableLiveData<Long>()
-        eventRef.orderByChild("Uid").equalTo(currentUid).addValueEventListener(object : ValueEventListener{
+        userRef.child(currentUid).child(EVENT_TBL_NAME).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()){
+                if (snapshot.hasChildren()
+
+
+
+                ){
                     result.value = snapshot.childrenCount
                     Log.d("EventNumber", snapshot.childrenCount.toString())
                 }

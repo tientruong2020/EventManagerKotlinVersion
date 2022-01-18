@@ -1,4 +1,4 @@
-package com.example.myapplication.Data.Remote
+package com.example.myapplication.data.remote
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData

@@ -3,9 +3,9 @@ package com.example.myapplication.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.myapplication.Data.Remote.FollowRepositoyImpl
-import com.example.myapplication.Data.Remote.RTDBRepositoryImpl
-import com.example.myapplication.Data.Remote.UserRepositoryImpl
+import com.example.myapplication.data.remote.FollowRepositoyImpl
+import com.example.myapplication.data.remote.RTDBRepositoryImpl
+import com.example.myapplication.data.remote.UserRepositoryImpl
 import com.example.myapplication.model.Event
 import com.example.myapplication.model.User
 
@@ -47,5 +47,13 @@ class ProfileViewModel(application: Application): AndroidViewModel(application) 
 
     fun countFollowing(currentUid: String):MutableLiveData<Long>{
         return followRepositoyImpl.countFollowing(currentUid)
+    }
+
+    fun signout(){
+        userRepositoryImpl.signout()
+    }
+
+    fun isLogined(): Boolean {
+        return userRepositoryImpl.isLogined()
     }
 }

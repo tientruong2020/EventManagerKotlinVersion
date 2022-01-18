@@ -4,10 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.Data.Remote.FollowRepository
-import com.example.myapplication.Data.Remote.FollowRepositoyImpl
-import com.example.myapplication.Data.Remote.RTDBRepositoryImpl
-import com.example.myapplication.Data.Remote.UserRepositoryImpl
+import com.example.myapplication.data.remote.FollowRepository
+import com.example.myapplication.data.remote.FollowRepositoyImpl
+import com.example.myapplication.data.remote.RTDBRepositoryImpl
+import com.example.myapplication.data.remote.UserRepositoryImpl
 import com.example.myapplication.model.Event
 import com.example.myapplication.model.User
 import kotlinx.coroutines.Dispatchers

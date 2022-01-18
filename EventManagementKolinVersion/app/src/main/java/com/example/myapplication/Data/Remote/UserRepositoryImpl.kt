@@ -1,4 +1,4 @@
-package com.example.myapplication.Data.Remote
+package com.example.myapplication.data.remote
 
 import android.app.Application
 import android.net.Uri
@@ -7,14 +7,12 @@ import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.model.User
 import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.*
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference

@@ -3,9 +3,8 @@ package com.example.myapplication.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.myapplication.Data.Remote.RTDBRepositoryImpl
+import com.example.myapplication.data.remote.RTDBRepositoryImpl
 import com.example.myapplication.model.Event
-import java.util.*
 import kotlin.collections.ArrayList
 
 class CalendarViewModel(application: Application): AndroidViewModel(application) {

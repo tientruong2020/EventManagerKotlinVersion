@@ -10,9 +10,7 @@
     <string name="nav_logout_title">Logout</string>
     <string name="open_drawer_nav_title">Open</string>
     <string name="close_drawer_nav_title">Close</string>
-    <string name="start_date">Start Date</string>
-    <string name="end_date">End Date</string>
-    <string name="place">Place</string>
+
     <string name="save">Save</string>
     <string name="event_name">Event Name</string>
     <string name="event_type">Event Type</string>

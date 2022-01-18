@@ -5,15 +5,14 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.Data.Remote.RTDBRepositoryImpl
-import com.example.myapplication.Data.Remote.UserRepositoryImpl
-import com.example.myapplication.Data.local.LocalDBRepository
+import com.example.myapplication.data.remote.RTDBRepositoryImpl
+import com.example.myapplication.data.remote.UserRepositoryImpl
+import com.example.myapplication.data.local.LocalDBRepository
 import com.example.myapplication.model.Event
 import com.example.myapplication.model.HistoricalSearchingText
 import com.example.myapplication.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
 
 class SearchViewModel(application: Application): AndroidViewModel(application) {
     private val localDBRepo : LocalDBRepository

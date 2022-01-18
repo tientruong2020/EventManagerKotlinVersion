@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.search.SearchUserFragment">
+    tools:context=".ui.search.SearchUserFragment">
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/rcv_searched_user"

@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.Profile
+package com.example.myapplication.ui.main.profile
 
 import android.content.Intent
 import android.net.Uri

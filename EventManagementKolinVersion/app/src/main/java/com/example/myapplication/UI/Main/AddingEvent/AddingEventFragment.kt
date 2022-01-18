@@ -1,10 +1,9 @@
-package com.example.myapplication.UI.Main.AddingEvent
+package com.example.myapplication.ui.main.addingevent
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -14,12 +13,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.adapter.PickedImagesAdapter
 import com.example.myapplication.databinding.FragmentAddingEventBinding
@@ -128,7 +125,7 @@ class AddingEventFragment : Fragment(), View.OnClickListener {
             override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
                 calendar.set(year, month, dayOfMonth)
                 val timeSetListener =
-                    TimePickerDialog.OnTimeSetListener { timepicker, hourOfDay, minute ->
+                    TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
                         calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
                         calendar.set(Calendar.MINUTE, minute)
                         val simpleDateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm")

@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Authentication.Register
+package com.example.myapplication.ui.authentication.Register
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.viewModel.RegisterViewModel
 import com.example.myapplication.R
-import com.example.myapplication.UI.Main.MainActivity
+import com.example.myapplication.ui.main.MainActivity
 import com.google.firebase.database.DatabaseReference
 import kotlinx.android.synthetic.main.fragment_register.*
 

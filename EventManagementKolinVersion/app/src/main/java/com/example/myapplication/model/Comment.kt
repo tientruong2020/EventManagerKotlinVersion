@@ -15,7 +15,7 @@ class Comment {
         this.createdAt = createdAt
     }
 
-    constructor(id: String, user: User, content: String, createdAt: Long) {
+    constructor(id: String,uid:String, user: User, content: String, createdAt: Long) {
         this.id = id
         this.uid = uid
         this.content = content

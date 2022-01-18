@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Authentication.WellcomeAuth
+package com.example.myapplication.ui.authentication.WellcomeAuth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

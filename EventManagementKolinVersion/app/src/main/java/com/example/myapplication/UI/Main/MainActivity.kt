@@ -1,20 +1,17 @@
-package com.example.myapplication.UI.Main
+package com.example.myapplication.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.myapplication.R
-import com.example.myapplication.UI.Authentication.AuthenticationActivity
-import com.example.myapplication.UI.Main.ChangePasswordDialog.ChangePasswordDialog
-import com.example.myapplication.UI.search.SearchEventFragment
+import com.example.myapplication.ui.authentication.AuthenticationActivity
+import com.example.myapplication.ui.main.changepassworddialog.ChangePasswordDialog
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.viewModel.MainViewModel
 import com.google.android.material.navigation.NavigationView
@@ -22,11 +19,8 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import com.squareup.picasso.Picasso
-import de.hdodenhof.circleimageview.CircleImageView
-import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(){
     private lateinit var mainViewModel: MainViewModel
     private lateinit var database: DatabaseReference
     private lateinit var binding: ActivityMainBinding
@@ -81,15 +75,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     fun setBottomNavigation(){
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navHostFragment.navController)
-    }
-
-
-    override fun onClick(v: View?) {
-//        when(v?.id){
-//
-//               mainViewModel.signout()
-//                toAuthentication()
-//        }
     }
 
 

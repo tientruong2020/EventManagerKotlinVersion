@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.Profile
+package com.example.myapplication.ui.main.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.R
 import com.example.myapplication.adapter.UserAdapter
 import com.example.myapplication.databinding.FragmentMyFriendBinding
 import com.example.myapplication.viewModel.ProfileViewModel

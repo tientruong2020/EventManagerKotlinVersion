@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.DetailEvent
+package com.example.myapplication.ui.main.detailevent
 
 import android.net.Uri
 import android.os.Bundle
@@ -12,15 +12,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
-import com.example.myapplication.UI.Main.Home.CommentValidator
-import com.example.myapplication.UI.Main.Home.HomeFragmentDirections
-import com.example.myapplication.UI.Main.QRCodeGenerator.QRCodeGeneratorFragment
+import com.example.myapplication.ui.main.home.CommentValidator
+import com.example.myapplication.ui.main.qrcodegenerator.QRCodeGeneratorFragment
 import com.example.myapplication.adapter.CommentsAdapter
 import com.example.myapplication.adapter.EventSliderAdapter
 import com.example.myapplication.databinding.FragmentDetailEventBinding
 import com.example.myapplication.viewModel.DetailEventViewModel
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.each_event_layout.view.*
 
 
 class DetailEventFragment : Fragment(), View.OnClickListener {

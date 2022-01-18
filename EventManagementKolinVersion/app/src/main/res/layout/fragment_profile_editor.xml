@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".UI.Main.Profile.ProfileEditorFragment">
+    tools:context=".ui.main.profile.ProfileEditorFragment">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_back_to_profile"

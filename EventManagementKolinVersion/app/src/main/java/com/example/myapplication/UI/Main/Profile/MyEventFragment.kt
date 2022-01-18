@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.Profile
+package com.example.myapplication.ui.main.profile
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.R
 import com.example.myapplication.adapter.MyEventAdapter
 import com.example.myapplication.databinding.FragmentMyEventBinding
 import com.example.myapplication.viewModel.ProfileViewModel

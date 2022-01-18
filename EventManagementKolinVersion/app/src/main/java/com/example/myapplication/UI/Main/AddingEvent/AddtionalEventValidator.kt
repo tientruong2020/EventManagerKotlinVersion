@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.AddingEvent
+package com.example.myapplication.ui.main.addingevent
 
 import android.text.TextUtils
 import android.util.Patterns

@@ -1,16 +1,13 @@
-package com.example.myapplication.UI.Main.Calendar
+package com.example.myapplication.ui.main.calendar
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
-import android.widget.LinearLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.R
 import com.example.myapplication.adapter.MyEventAdapter
 import com.example.myapplication.databinding.FragmentCalendarBinding
 import com.example.myapplication.model.Event

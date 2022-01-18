@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.Profile
+package com.example.myapplication.ui.main.profile
 
 import android.content.Intent
 import android.net.Uri
@@ -11,15 +11,12 @@ import android.view.ViewGroup
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
-import com.example.myapplication.UI.search.SearchEventFragment
-import com.example.myapplication.UI.search.SearchUserFragment
+import com.example.myapplication.ui.authentication.AuthenticationActivity
 import com.example.myapplication.adapter.ViewPagerAdapter
 import com.example.myapplication.databinding.FragmentProfileBinding
 import com.example.myapplication.model.User
 import com.example.myapplication.viewModel.ProfileViewModel
-import com.google.android.material.tabs.TabLayout
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile.*
 import java.lang.Exception
@@ -55,6 +52,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         btn_to_change_profile.setOnClickListener(this)
         viewBinding.iwEmail.setOnClickListener(this)
         viewBinding.twEmail.setOnClickListener(this)
+        viewBinding.btnLogout.setOnClickListener(this)
     }
 
     fun init(){
@@ -90,10 +88,25 @@ class ProfileFragment : Fragment(), View.OnClickListener {
             (viewBinding.twEmail) -> {
                 openEmail()
             }
+            (viewBinding.btnLogout) -> {
+                logout()
+            }
         }
     }
 
-    fun openEmail(){
+    private fun logout() {
+        profileViewModel.signout()
+        if (!profileViewModel.isLogined()){
+            toAuthentication()
+        }
+    }
+    fun toAuthentication(){
+        val intent = Intent(requireContext(), AuthenticationActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+        startActivity(intent)
+    }
+
+    private fun openEmail(){
         val recipient = viewBinding.twEmail.text
         val intent = Intent(Intent.ACTION_SEND)
         intent.data = Uri.parse("mailto:")
@@ -108,37 +121,37 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         }
     }
 
-    fun toEditProfile(){
+    private fun toEditProfile(){
         userLiveData.observe(viewLifecycleOwner,{userInfo ->
             val action = ProfileFragmentDirections.actionProfileFragmentToProfileEditorFragment(userInfo)
             findNavController().navigate(action)
         })
     }
-    fun getNumberOfEvents(){
+    private fun getNumberOfEvents(){
         val currentUid = profileViewModel.getCurrentUid()
         profileViewModel.countEvents(currentUid).observe(viewLifecycleOwner,{
             viewBinding.twEventNumber.text = it.toString()
         })
     }
 
-    fun getNumberOfFollower(){
+    private fun getNumberOfFollower(){
         val currentUid = profileViewModel.getCurrentUid()
         Log.d("currentUidFollower", currentUid)
         profileViewModel.countFollower(currentUid).observe(viewLifecycleOwner,{
             viewBinding.twFollowerNumber.text = it.toString()
         })
     }
-    fun getNumberOfFollowing(){
+    private fun getNumberOfFollowing(){
         val currentUid = profileViewModel.getCurrentUid()
         profileViewModel.countFollowing(currentUid).observe(viewLifecycleOwner,{
             viewBinding.twFollowingNumber.text = it.toString()
         })
     }
 
-    fun initViewPager(){
+    private fun initViewPager(){
         val adapter = ViewPagerAdapter(this.parentFragmentManager)
         adapter.addFragment(MyEventFragment(),"My Event")
-        adapter.addFragment(MyFriendFragment(), "Following Userx")
+        adapter.addFragment(MyFriendFragment(), "Following User")
         viewBinding.viewPager.adapter = adapter
         viewBinding.tabLayout.setupWithViewPager(viewBinding.viewPager)
     }

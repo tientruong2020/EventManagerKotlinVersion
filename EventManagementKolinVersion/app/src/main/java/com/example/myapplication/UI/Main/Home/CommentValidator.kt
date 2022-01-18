@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.Home
+package com.example.myapplication.ui.main.home
 
 import android.text.TextUtils
 

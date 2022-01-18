@@ -1,4 +1,4 @@
-package com.example.myapplication.Data.Remote
+package com.example.myapplication.data.remote
 
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.model.User

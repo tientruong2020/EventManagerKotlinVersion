@@ -3,7 +3,7 @@ package com.example.myapplication.viewModel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.myapplication.Data.Remote.UserRepositoryImpl
+import com.example.myapplication.data.remote.UserRepositoryImpl
 
 class ChangePasswordViewModel(application: Application):AndroidViewModel(application) {
 

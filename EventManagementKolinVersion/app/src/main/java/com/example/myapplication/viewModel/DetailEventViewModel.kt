@@ -5,8 +5,8 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.Data.Remote.RTDBRepositoryImpl
-import com.example.myapplication.Data.Remote.UserRepositoryImpl
+import com.example.myapplication.data.remote.RTDBRepositoryImpl
+import com.example.myapplication.data.remote.UserRepositoryImpl
 import com.example.myapplication.model.Comment
 import com.example.myapplication.model.Event
 import com.example.myapplication.model.User

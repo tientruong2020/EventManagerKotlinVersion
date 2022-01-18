@@ -1,7 +1,6 @@
-package com.example.myapplication.UI.Main.Home
+package com.example.myapplication.ui.main.home
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -89,7 +88,7 @@ class CommentFragment : Fragment(), View.OnClickListener {
     fun displayAllComment(){
         commentViewModel.getAllComment(eventId).observe(viewLifecycleOwner, {
            if (it.size > 0){
-                val comparator = Comparator { c1:Comment, c2:Comment -> c1.createdAt.compareTo(c2.createdAt)*-1  }
+                val comparator = Comparator { c1:Comment, c2:Comment -> c2.createdAt.compareTo(c1.createdAt)  }
                commentsAdapter.setDataForAdapter(it.sortedWith(comparator))
            }
         })
@@ -124,6 +123,7 @@ class CommentFragment : Fragment(), View.OnClickListener {
     }
     private fun toUserProFile(userId: String){
         val currentUid  = commentViewModel.getCurrentUid()
+        Log.d("currentUid","$currentUid  & $userId")
         if (userId.equals(currentUid)){
             findNavController().navigate(R.id.profileFragment)
         }

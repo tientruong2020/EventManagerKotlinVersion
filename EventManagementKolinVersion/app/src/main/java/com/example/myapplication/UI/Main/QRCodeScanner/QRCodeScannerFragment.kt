@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.QRCodeScanner
+package com.example.myapplication.ui.main.qrcodescanner
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
-import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentQRCodeScannerBinding
 import com.example.myapplication.viewModel.ScannerViewModel
 

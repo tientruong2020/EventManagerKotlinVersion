@@ -15,8 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".UI.Authentication.AuthenticationActivity"/>
-        <activity android:name=".UI.Main.MainActivity">
+        <activity android:name=".ui.authentication.AuthenticationActivity"/>
+        <activity android:name=".ui.main.MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

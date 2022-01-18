@@ -1,6 +1,5 @@
-package com.example.myapplication.UI.Main.Home
+package com.example.myapplication.ui.main.home
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,28 +7,18 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
-import com.example.myapplication.UI.Authentication.AuthenticationActivity
-import com.example.myapplication.UI.Main.ChangePasswordDialog.ChangePasswordDialog
-import com.example.myapplication.UI.Main.QRCodeGenerator.QRCodeGeneratorFragment
+import com.example.myapplication.ui.main.qrcodegenerator.QRCodeGeneratorFragment
 import com.example.myapplication.adapter.EventAdapter
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.model.Event
 import com.example.myapplication.viewModel.HomeViewModel
-import com.google.android.material.navigation.NavigationView
-import com.google.android.play.core.assetpacks.cu
 import com.squareup.picasso.Picasso
-import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.fragment_home.*
-import java.util.*
 import kotlin.Comparator
 import kotlin.collections.ArrayList
 

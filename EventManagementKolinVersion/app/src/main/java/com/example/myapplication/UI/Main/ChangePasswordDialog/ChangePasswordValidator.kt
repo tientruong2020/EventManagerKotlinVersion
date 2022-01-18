@@ -1,4 +1,4 @@
-package com.example.myapplication.UI.Main.ChangePasswordDialog
+package com.example.myapplication.ui.main.changepassworddialog
 
 import android.text.TextUtils
 

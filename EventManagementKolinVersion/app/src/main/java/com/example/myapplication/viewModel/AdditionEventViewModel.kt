@@ -4,8 +4,8 @@ import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.myapplication.Data.Remote.RTDBRepositoryImpl
-import com.example.myapplication.Data.Remote.UserRepositoryImpl
+import com.example.myapplication.data.remote.RTDBRepositoryImpl
+import com.example.myapplication.data.remote.UserRepositoryImpl
 import com.example.myapplication.model.Event
 
 class AdditionEventViewModel(application: Application): AndroidViewModel(application) {

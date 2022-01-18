@@ -1,11 +1,9 @@
-package com.example.myapplication.Data.Remote
+package com.example.myapplication.data.remote
 
 import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.model.Comment
 import com.example.myapplication.model.Event
-import com.example.myapplication.model.User
-import java.util.*
 import kotlin.collections.ArrayList
 
 interface RTDBRepository {
